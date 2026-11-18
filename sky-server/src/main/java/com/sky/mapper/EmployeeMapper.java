@@ -29,8 +29,14 @@ public interface EmployeeMapper {
 
     /**
      * 分页查询员工
-     * @param employeePageQueryDTO
-     * @return
+     * @param employeePageQueryDTO 前端DTO
+     * @return 包含数据的Page对象
      */
     Page<Employee> pageQuery(EmployeePageQueryDTO employeePageQueryDTO);
+
+    /**
+     * 更新员工数据库
+     * @param employee 被修改的员工
+     */
+    void update(Employee employee);
 }

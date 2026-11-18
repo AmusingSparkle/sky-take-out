@@ -22,4 +22,11 @@ public interface EmployeeService {
      * 分页查询员工
      */
     PageResult pageQuery(EmployeePageQueryDTO employeePageQueryDTO);
+
+    /**
+     * 启用或禁用员工
+     * @param status 更改后的状态
+     * @param id 被修改员工的id
+     */
+    void startOrStop(int status, long id);
 }

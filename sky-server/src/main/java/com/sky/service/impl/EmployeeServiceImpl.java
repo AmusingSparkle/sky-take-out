@@ -102,4 +102,13 @@ public class EmployeeServiceImpl implements EmployeeService {
         List<Employee> recodes = page.getResult();
         return new PageResult(total, recodes);
     }
+
+    @Override
+    public void startOrStop(int status, long id) {
+        Employee employee = Employee.builder()
+                .id(id)
+                .status(status)
+                .build();
+        employeeMapper.update(employee);
+    }
 }
