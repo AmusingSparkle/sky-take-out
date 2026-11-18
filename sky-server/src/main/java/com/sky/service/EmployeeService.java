@@ -29,4 +29,18 @@ public interface EmployeeService {
      * @param id 被修改员工的id
      */
     void startOrStop(int status, long id);
+
+    /**
+     根据id查询员工
+     * @param id 查询的id
+     * @return 员工信息
+     */
+    Employee getById(long id);
+
+    /**
+     * 编辑员工信息
+     * @param employeeDTO 编辑前信息
+     * @return 说明是否成功
+     */
+    void update(EmployeeDTO employeeDTO);
 }
